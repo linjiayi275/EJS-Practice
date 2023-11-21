@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <!-- *form in EJS* 使用到 -->
+    <!-- <h1>You are on the Homepage.</h1>
+    <br>
+    <h2>Simple Form</h2>
+    <form action="/response" method="GET">
+        <label for="fullname">Name:</label>
+        <input type="text" name="fullname" id="fullname">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age">
+        <button type="submit">Submit</button>
+    </form> -->
+    <h1>Common Programming Languages</h1>
+    <br>
+    <!-- 將以下3行註解掉 -->
+    <!-- <% languages.forEach(lang => { %>
+        <p><%= lang.name %></p>
+    <% }) %> -->
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>rating</th>
+            <th>popularity</th>
+            <th>trending</th>
+        </tr>
+        <% languages.forEach(lang => { %>
+            <tr>
+                <td><%= lang.name %></td>
+                <td><%= lang.rating %></td>
+                <td><%= lang.popularity %></td>
+                <td><%= lang.trending %></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
+
